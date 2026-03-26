@@ -9,6 +9,7 @@ public class HttpStudentPost extends HttpStudentClientMain {
         HttpStudentPost demo = new HttpStudentPost();
         var client = demo.httpClient();
 
+        // b. Create a new student
         String json = """
                 {
                   "name": "Kasun Pathirana",
@@ -20,7 +21,8 @@ public class HttpStudentPost extends HttpStudentClientMain {
         var request  = demo.getHttpRequestPOST(json);
         var response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-        System.out.printf("Status : %s%n", response.statusCode());
+        System.out.println("=== Task 01(b): Create New Student ===");
+        System.out.printf("Status : %d%n", response.statusCode());
         System.out.printf("Created: %s%n", response.body());
     }
 }

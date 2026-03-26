@@ -3,6 +3,7 @@ package lk.ac.jfn.ec9590.server.controller;
 import lk.ac.jfn.ec9590.server.model.Student;
 import lk.ac.jfn.ec9590.server.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,8 +25,9 @@ public class StudentController {
 
     // b. POST - create new student
     @PostMapping
-    public Student createStudent(@RequestBody Student student) {
-        return repo.save(student);
+    public ResponseEntity<Student> createStudent(@RequestBody Student student) {
+        Student saved = repo.save(student);
+        return ResponseEntity.status(HttpStatus.CREATED).body(saved);
     }
 
     // c. PUT - update student email by regNo

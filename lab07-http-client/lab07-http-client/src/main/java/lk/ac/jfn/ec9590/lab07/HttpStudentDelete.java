@@ -9,11 +9,13 @@ public class HttpStudentDelete extends HttpStudentClientMain {
         HttpStudentDelete demo = new HttpStudentDelete();
         var client  = demo.httpClient();
 
-        int regNo = 3;  // RegNo of the student to delete
+        // d. Delete student with regNo=3
+        int regNo = 3;
         var request  = demo.httpRequestDELETE(regNo);
         var response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-        System.out.printf("Status: %s%n", response.statusCode());
+        System.out.println("=== Task 01(d): Delete Student ===");
+        System.out.printf("Status: %d%n", response.statusCode());
         if (response.statusCode() == 204) {
             System.out.printf("Student RegNo %d deleted successfully.%n", regNo);
         } else {

@@ -9,7 +9,8 @@ public class HttpStudentPut extends HttpStudentClientMain {
         HttpStudentPut demo = new HttpStudentPut();
         var client = demo.httpClient();
 
-        int regNo = 1;  // RegNo of the student whose email you want to update
+        // c. Update email of student with regNo=1
+        int regNo = 1;
         String json = """
                 {
                   "email": "alice.updated@eng.jfn.ac.lk"
@@ -19,7 +20,8 @@ public class HttpStudentPut extends HttpStudentClientMain {
         var request  = demo.getHttpRequestPUT(regNo, json);
         var response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-        System.out.printf("Status : %s%n", response.statusCode());
+        System.out.println("=== Task 01(c): Update Student Email ===");
+        System.out.printf("Status : %d%n", response.statusCode());
         System.out.printf("Updated: %s%n", response.body());
     }
 }

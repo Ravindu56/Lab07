@@ -5,7 +5,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.time.Duration;
 
-public abstract class HttpStudentClientMain {
+public class HttpStudentClientMain {
 
     public static final String HTTP_STUDENTS_URI = "http://localhost:8080/students";
 

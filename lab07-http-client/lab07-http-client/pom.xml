@@ -7,7 +7,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- Use your own groupId/artifactId if you prefer -->
-    <groupId>lk.ac.jfn.ec9590</groupId>
+    <groupId><lk class="ac jfn ec9590 lab07"></lk></groupId>
     <artifactId>lab07-http-client</artifactId>
     <version>1.0-SNAPSHOT</version>
 

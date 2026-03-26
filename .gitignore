@@ -4,3 +4,6 @@ lab07-http-client/lab07-http-client/target/*
 *.log
 *.Ist
 *.lst
+lab07-http-client/lab07-http-client/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+lab07-http-client/lab07-http-client/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+lab07-http-client/lab07-http-client/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst

@@ -23,6 +23,14 @@ public class StudentController {
         return repo.findAll();
     }
 
+    // GET single student by regNo
+    @GetMapping("/{regNo}")
+    public ResponseEntity<Student> getStudentByRegNo(@PathVariable int regNo) {
+        Optional<Student> opt = repo.findById(regNo);
+        if (opt.isEmpty()) return ResponseEntity.notFound().build();
+        return ResponseEntity.ok(opt.get());
+    }
+
     // b. POST - create new student
     @PostMapping
     public ResponseEntity<Student> createStudent(@RequestBody Student student) {

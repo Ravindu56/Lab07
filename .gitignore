@@ -1,2 +1,6 @@
 target/*
 lab07-student-server/target/*
+lab07-http-client/lab07-http-client/target/*
+*.log
+*.Ist
+*.lst
